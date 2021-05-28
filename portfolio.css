@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans:wght@500&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style:none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+p{
+  margin-bottom: 15px;
+  font-size: 17px;
+  line-height: 20px;
+  color: black;
+  padding-top: 10px;
+}
+
+.mainContainer{
+  position: relative;
+}
+
+/* Banner Image */
+.banner_image{
+  background-color: #87CEEB;
+  margin-top: -10%;  /* Remove when gallery page is done. */
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.banner_content{
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.banner_content h1{
+  font-size: 38px;
+  text-transform: uppercase;
+  line-height: 38px;
+  margin-bottom: 30px;
+  transition: 2s;
+}
+
+.banner_content h1 span{
+  color: #000000;
+  font-size: 20px;
+  transition: 2s;
+}
+
+.fonts {
+  margin-top: 2%;
+  margin-bottom: -20%;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  justify-content: space-between;
+  font-size: 300%;
+}
+
+.fonts:hover {
+   transform: scale(1.5);
+}
+
+
+.row {
+  padding: 50px 100px;
+  background: #58b6ec;
+}
+
+/* Introduction */
+.intro {
+  flex: 100%;
+  text-align: center;
+}
+
+.bodyContainer{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  min-height: 100vh;
+  background-color: #40a9bb;
+  /* background: url(summer.jpg) no-repeat fixed center; */
+}
+
+.container{
+  position: relative;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: minmax(100px, auto);
+  margin: 40px;
+  grid-auto-flow: dense;
+  grid-gap: 10px;
+}
+
+.container .box{
+  background: #c7e0df;
+  padding: 20px;
+  display: grid;
+  font-size: 20px;
+  place-items: center;
+  text-align: center;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+
+.container .box:hover{
+  background: #ffddd3; 
+}
+
+.container .box:nth-child(1){
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.container .box:nth-child(2){
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.container .box:nth-child(3){
+  grid-column: span 4;
+  grid-row: span 1;
+}
+
+.container .box:nth-child(4){
+  grid-column: span 4;
+  grid-row: span 1;
+}
+
+.container .box:nth-child(5){
+  grid-column: span 4;
+  grid-row: span 1;
+}
+
+
+.container .box:nth-child(6){
+  grid-column: span 4;
+  grid-row: span 1;
+}
+
+.container .box:nth-child(7){
+  grid-column: span 4;
+  grid-row: span 1;
+}
+.container .box:nth-child(8){
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.container .box:nth-child(9){
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.container .box:nth-child(10){
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.container .box:nth-child(11){
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background-color: #f18e0c;
+  /* background: url("summer.jpg") no-repeat top center; */
+  background-size: cover;
+}
+
+.footer a{
+  color: #000000;
+}
+
+/* Arrow */
+.arrow{
+  position: fixed;
+  bottom: 25px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.arrow img{
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  animation: rotation 2s infinite linear;
+}
+
+.arrow :hover{
+  animation: paused;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+.block {
+  display: flex;
+  flex-direction: row;
+}
+
+.child {
+  flex: 1 0 15%;
+  margin: 10%;
+}
+
+@media (max-width: 991px){
+  .navbar{
+      height: auto;
+      flex-direction: column;
+  }
+
+  .navbar ul{
+      flex-direction: column;
+      text-align: center;
+      margin-top: 15px;
+  }
+
+  .navbar ul li{
+      margin-bottom: 5px;
+  }
+
+  .navbar .navbarItem ul li a{
+      font-size: 23px;
+  }
+
+  .banner_image{
+      height: 400px;
+  }
+
+  .banner_content{
+      margin-top: 25px;
+  }
+
+  .row{
+      padding: 20px 10px;
+  }
+
+  .container{
+    grid-template-columns: minmax(auto, 1fr);
+    grid-template-rows: minmax(auto, auto);
+  }
+
+  .container .box{
+    grid-column: unset !important;
+    grid-row: unset !important;
+  }
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  * {
+    width: 100%;
+    height: auto;
+  }
+
+  img {
+    width: 20%;
+  }
+
+  .banner_content{
+    height: 100px;
+    margin-top: -20px;
+  }
+
+  .mainContainer{
+    margin-top: -250px;
+  }
+}
+}
