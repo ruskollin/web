@@ -29,7 +29,7 @@ p{
 /* Banner Image */
 .banner_image{
   background-color: #87CEEB;
-  margin-top: -10%;  /* Remove when gallery page is done. */
+  margin-top: -7%;  /* Remove when gallery page is done. */
   width: 100%;
   height: 300px;
   display: flex;
