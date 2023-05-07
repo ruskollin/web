@@ -29,9 +29,8 @@ p{
 /* Banner Image */
 .banner_image{
   background-color: #87CEEB;
-  margin-top: -10%;  /* Remove when gallery page is done. */
   width: 100%;
-  height: 300px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -70,7 +69,6 @@ p{
    transform: scale(1.5);
 }
 
-
 .row {
   padding: 50px 100px;
   background: #58b6ec;
@@ -93,7 +91,9 @@ p{
 
 .container{
   position: relative;
-  max-width: 100%;
+  max-width: 1400px;
+  width: 96vw;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-template-rows: minmax(100px, auto);
@@ -111,6 +111,7 @@ p{
   text-align: center;
   transition: 0.5s;
   border-radius: 5px;
+  overflow-x: auto;
 }
 
 
@@ -186,8 +187,35 @@ p{
   color: #000000;
 }
 
+.progress-bar__container {
+  width: 300px;
+  height: 1rem;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 5px #62aadd;
+  margin-top: 11px;
+  margin-left: 11px;
+}
+
+.progress-bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-color: #6eb9ef;
+  top:0;
+  bottom: 0;
+  border-radius: inherit;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  color: white;
+  font-family: sans-serif;
+}
+
 /* Arrow */
-.arrow{
+/* .arrow{
   position: fixed;
   bottom: 25px;
   right: 18px;
@@ -216,7 +244,7 @@ p{
   to {
     transform: rotate(359deg);
   }
-}
+} */
 
 
 .block {
@@ -226,7 +254,6 @@ p{
 
 .child {
   flex: 1 0 15%;
-  margin: 10%;
 }
 
 @media (max-width: 600px){
@@ -261,16 +288,6 @@ p{
       padding: 20px 10px;
   }
 
-  .container{
-    grid-template-columns: minmax(auto, 1fr);
-    grid-template-rows: minmax(auto, auto);
-  }
-
-  .container .box{
-    grid-column: unset !important;
-    grid-row: unset !important;
-  }
-
   * {
     width: 100%;
     height: auto;
@@ -279,7 +296,6 @@ p{
   img {
     display: flex;
     width: 2%;
-    margin-left: 30px;
   }
 
   video {
@@ -300,10 +316,8 @@ p{
     margin-top: 30px;
   }
 
-
-
   figure {
-    width: 450px;
+    width: 100%;
   }
 
   iframe {
@@ -316,3 +330,15 @@ p{
   }
 }
 
+@media (max-width: 1250px){
+  .container{
+    grid-template-columns: minmax(auto, 1fr);
+    grid-template-rows: minmax(auto, auto);
+  }
+
+  .container .box{
+    grid-column: unset !important;
+    grid-row: unset !important;
+  }
+
+}
